@@ -1,0 +1,74 @@
+{
+  "heading": "Slider",
+  "slides": [
+    {
+      "src": "https://source.unsplash.com/500x500/?river",
+      "headline": "Slide 1",
+      "direction": "Slide 1 direction",
+      "tags": [
+        {
+          "name": "Tag 1"
+        },
+        {
+          "name": "Tag 2"
+        }
+      ],
+      "links": [
+        {
+          "name": "Link 1",
+          "url": "https://www.google.com"
+        },
+        {
+          "name": "Link 2",
+          "url": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "src": "https://source.unsplash.com/500x500/?wave",
+      "headline": "Slide 2",
+      "direction": "Slide 2 direction",
+      "tags": [
+        {
+          "name": "Tag 1"
+        },
+        {
+          "name": "Tag 2"
+        }
+      ],
+      "links": [
+        {
+          "name": "Link 1",
+          "url": "https://www.google.com"
+        },
+        {
+          "name": "Link 2",
+          "url": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "src": "https://source.unsplash.com/500x500/?beach",
+      "headline": "Slide 3",
+      "direction": "Slide 3 direction",
+      "tags": [
+        {
+          "name": "Tag 1"
+        },
+        {
+          "name": "Tag 2"
+        }
+      ],
+      "links": [
+        {
+          "name": "Link 1",
+          "url": "https://www.google.com"
+        },
+        {
+          "name": "Link 2",
+          "url": "https://www.google.com"
+        }
+      ]
+    }
+  ]
+}
