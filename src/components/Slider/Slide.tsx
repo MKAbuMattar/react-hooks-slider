@@ -30,24 +30,33 @@ export type SlideProps = {
 };
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
-  const slideRef = useRef(null);
+  const slideRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = slideRef.current;
-    const r = el.getBoundingClientRect();
+    const r = el!.getBoundingClientRect();
 
-    el.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)));
-    el.style.setProperty('--y', e.clientY - (r.top + Math.floor(r.height / 2)));
+    el!.style.setProperty(
+      '--x',
+      (e.clientX - (r.left + Math.floor(r.width / 2))).toString(),
+    );
+    el!.style.setProperty(
+      '--y',
+      (e.clientY - (r.top + Math.floor(r.height / 2))).toString(),
+    );
   };
 
   const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
-    slideRef.current.style.setProperty('--x', 0);
-    slideRef.current.style.setProperty('--y', 0);
+    const el = slideRef.current;
+    if (el) {
+      el.style.setProperty('--x', '0');
+      el.style.setProperty('--y', '0');
+    }
   };
 
   useEffect(() => {
-    const el = slideRef.current.querySelector('img');
-    el.style.opacity = 1;
+    const el = slideRef.current!.querySelector('img');
+    el!.style.opacity = '1';
   }, []);
 
   const { src, headline, direction, tags, links } = slide;

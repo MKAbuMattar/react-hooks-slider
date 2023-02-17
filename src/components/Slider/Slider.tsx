@@ -29,8 +29,9 @@ const Slider = ({ slides, heading }: SliderProps) => {
   };
 
   const handleSlideClick = (e: MouseEvent<HTMLDivElement>) => {
-    if (current !== +e.currentTarget.getAttribute('data-index')) {
-      setCurrent(+e.currentTarget.getAttribute('data-index'));
+    const index = e.currentTarget?.getAttribute('data-index');
+    if (index && current !== +index) {
+      setCurrent(+index);
     }
   };
 
